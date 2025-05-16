@@ -1,0 +1,17 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<article>
+  <h1>{{ title }}</h1>
+
+  {% if image %}
+    <img src="{{ image }}" alt="{{ title }}">
+  {% endif %}
+
+  {% if description %}
+    <p><strong>{{ description }}</strong></p>
+  {% endif %}
+
+  {{ content | safe }}
+</article>
+{% endblock %}
