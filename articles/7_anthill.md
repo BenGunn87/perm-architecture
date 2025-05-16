@@ -1,5 +1,5 @@
 ---
-title: Муравейник
+title: Центр детского творчества «Муравейник»
 layout: article.njk
 image: /images/anthill.jpg
 order: 3
