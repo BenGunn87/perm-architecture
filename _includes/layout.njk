@@ -45,7 +45,7 @@
 </head>
 <body>
   <header>
-    <h1><a href="/">Архитектура Перми</a></h1>
+    <h1><a href="{{ '/' | url }}">Архитектура Перми</a></h1>
   </header>
   <main>
     {% block content %}
@@ -53,7 +53,7 @@
     {% endblock %}
   </main>
   <nav>
-    <a href="/">Главная</a>
+    <a href="{{ '/' | url }}">Главная</a>
   </nav>
 </body>
 </html>
