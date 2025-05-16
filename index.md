@@ -8,5 +8,5 @@ layout: layout.njk
 ## Статьи
 
 {% for post in collections.article | reverse %}
-- [{{ post.data.title }}]({{ post.url }})
+- [{{ post.data.title }}]({{ post.url | url }})
   {% endfor %}

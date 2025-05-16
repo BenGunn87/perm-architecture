@@ -5,7 +5,7 @@
   <h1>{{ title }}</h1>
 
   {% if image %}
-    <img src="{{ image }}" alt="{{ title }}">
+    <img src="{{ image | url }}" alt="{{ title }}">
   {% endif %}
 
   {% if description %}

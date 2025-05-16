@@ -8,6 +8,7 @@ module.exports = function (eleventyConfig) {
     });
 
     return {
+        pathPrefix: "/perm-architecture",
         dir: {
             input: ".",         // Директория входных файлов
             includes: "_includes", // Директория для шаблонов
