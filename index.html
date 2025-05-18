@@ -41,47 +41,264 @@
     nav a {
       margin-right: 1rem;
     }
+
+    /* Hero section */
+    .hero-bg {
+      position: relative;
+      min-height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 2rem;
+      margin-bottom: 2.5rem;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(44,62,80,0.05);
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(120deg, rgba(38,57,92,0.34) 0%, rgba(44,62,80,0.25) 100%);
+      z-index: 1;
+    }
+    .hero-content-on-bg {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      text-align: center;
+      padding: 3.5rem 2rem 3.5rem 2rem;
+      max-width: 800px;
+      width: 100%;
+    }
+    .hero-content-on-bg h1 {
+      font-size: 2.9rem;
+      margin: 0 0 1.5rem 0;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 0 2px 8px rgba(44,62,80,0.14);
+    }
+    .hero-content-on-bg p {
+      font-size: 1.35rem;
+      line-height: 1.45;
+      margin: 0;
+      text-shadow: 0 1px 6px rgba(44,62,80,0.11);
+    }
+
+    @media (max-width: 600px) {
+      .hero-bg {
+        min-height: 190px;
+        border-radius: 1.1rem;
+        margin-bottom: 1.1rem;
+      }
+      .hero-content-on-bg {
+        padding: 1.5rem 0.6rem 1.5rem 0.6rem;
+      }
+      .hero-content-on-bg h1 {
+        font-size: 1.5rem;
+      }
+      .hero-content-on-bg p {
+        font-size: 1rem;
+      }
+    }
+
+    .articles-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+      padding: 0;
+    }
+
+    .article-card-horizontal {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 2px 14px rgba(44,62,80,0.08);
+      border: 1px solid #e4e8ee;
+      min-height: 120px;
+      max-width: 700px;
+      padding: 0.7rem 1.1rem;
+      margin-bottom: 0.5rem;
+      transition: transform 0.16s, box-shadow 0.16s;
+      overflow: hidden;
+    }
+
+    .article-card-horizontal:hover {
+      transform: translateY(-3px) scale(1.01);
+      box-shadow: 0 8px 24px rgba(44,62,80,0.13);
+      border-color: #b2c2e2;
+    }
+
+    .article-thumb {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 0.7rem;
+      margin-right: 1.5rem;
+      flex-shrink: 0;
+      background: #eee;
+      box-shadow: 0 1px 3px rgba(44,62,80,0.06);
+    }
+
+    .article-card-horizontal .article-card-content {
+      flex: 1;
+      padding: 0.2rem 0.2rem 0.2rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .article-card-horizontal h3 {
+      margin: 0 0 0.35em 0;
+      font-size: 1.2rem;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+
+    .article-card-horizontal h3 a {
+      color: #1560b0;
+      text-decoration: none;
+      transition: color 0.16s;
+    }
+    .article-card-horizontal h3 a:hover {
+      color: #294263;
+      text-decoration: underline;
+    }
+
+    .article-card-horizontal p {
+      margin: 0 0 0.5em 0;
+      font-size: 1rem;
+      color: #52607c;
+    }
+
+    .article-card-horizontal .read-more {
+      align-self: flex-start;
+      color: #1560b0;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 0.5rem;
+      padding: 0.22em 0.8em;
+      background: #e4e8ee;
+      transition: background 0.18s;
+      margin-top: auto;
+      margin-bottom: 0.2rem;
+      display: inline-block;
+    }
+    .article-card-horizontal .read-more:hover {
+      background: #cfdcf2;
+      text-decoration: underline;
+    }
+
+    /* Mobile adaptation */
+    @media (max-width: 700px) {
+      .article-card-horizontal {
+        flex-direction: column;
+        max-width: 100%;
+        align-items: stretch;
+        padding: 0.5rem 0.6rem;
+      }
+      .article-thumb {
+        margin: 0 0 1rem 0;
+        width: 100%;
+        height: 140px;
+      }
+      .article-card-horizontal .article-card-content {
+        padding: 0 0.2rem 0.2rem 0;
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1><a href="/perm-architecture/">Архитектура Перми</a></h1>
-  </header>
-  <main>
-    
-          <p>Добро пожаловать на сайт, посвящённый архитектуре Перми.</p>
-<p>Пермь — город с богатой историей и разнообразным архитектурным наследием. Здесь сочетаются здания разных эпох и стилей: от купеческих особняков XIX века до современных бизнес-центров. Этот сайт создан для того, чтобы познакомить вас с уникальными архитектурными памятниками города, рассказать об их истории и особенностях.</p>
-<p>В разделе «Статьи» вы найдёте материалы о различных зданиях Перми. Мы стремимся сохранить память о прошлом и показать, как архитектура отражает развитие Перми на протяжении веков.</p>
-<p>Присоединяйтесь к нам в этом увлекательном путешествии по архитектурным достопримечательностям Перми!</p>
-<h2>Статьи</h2>
-<ul>
-<li>
-<p><a href="/perm-architecture/articles/3_meshkov_house/">Дом Мешкова</a></p>
-</li>
-<li>
-<p><a href="/perm-architecture/articles/4_gribushin_house/">Дом Грибушина</a></p>
-</li>
-<li>
-<p><a href="/perm-architecture/articles/7_anthill/">Центр детского творчества «Муравейник»</a></p>
-</li>
-<li>
-<p><a href="/perm-architecture/articles/6_uni/">Пермский государственный аграрно-технологический университет</a></p>
-</li>
-<li>
-<p><a href="/perm-architecture/articles/2_perm1/">Вокзал Пермь 1</a></p>
-</li>
-<li>
-<p><a href="/perm-architecture/articles/1_locks/">Управления шлюзов Камской ГЭС</a></p>
-</li>
-<li>
-<p><a href="/perm-architecture/articles/5_tower/">Здание главного управления МВД России по Пермскому краю</a></p>
-</li>
-<li>
-<p><a href="/perm-architecture/articles/8_honeycomb/">Бизнес-центр «Сота»</a></p>
-</li>
-</ul>
+<section class="hero hero-bg" style="background-image: url('/perm-architecture/images/hero.jpeg');">
+  <div class="hero-overlay"></div>
+  <div class="hero-content-on-bg">
+    <h1>Архитектура Перми</h1>
+    <p>Добро пожаловать! На этом сайте собраны статьи о самых интересных зданиях и архитектурных памятниках города Перми. Погрузитесь в историю, факты и стили, которые формируют облик нашего города.</p>
+  </div>
+</section>
 
-    
+  <main>
+<h2>Статьи</h2>
+<div class="articles-list">
+  
+    <div class="article-card-horizontal">
+      <img class="article-thumb" src="/perm-architecture/images/meshkov_house.jpg" alt="Дом Мешкова">
+      <div class="article-card-content">
+        <h3><a href="/perm-architecture/articles/3_meshkov_house/">Дом Мешкова</a></h3>
+        <p>Среди живописных построек старой Перми, что раскинулась вдоль набережной Камы, особое место занимает Дом Мешкова...</p>
+        <a class="read-more" href="/perm-architecture/articles/3_meshkov_house/">Читать →</a>
+      </div>
+    </div>
+  
+    <div class="article-card-horizontal">
+      <img class="article-thumb" src="/perm-architecture/images/gribushin_house.jpg" alt="Дом Грибушина">
+      <div class="article-card-content">
+        <h3><a href="/perm-architecture/articles/4_gribushin_house/">Дом Грибушина</a></h3>
+        <p>На улице Ленина, находится один из самых выразительных архитектурных памятников Перми — Дом Грибушина</p>
+        <a class="read-more" href="/perm-architecture/articles/4_gribushin_house/">Читать →</a>
+      </div>
+    </div>
+  
+    <div class="article-card-horizontal">
+      <img class="article-thumb" src="/perm-architecture/images/anthill.jpg" alt="Центр детского творчества «Муравейник»">
+      <div class="article-card-content">
+        <h3><a href="/perm-architecture/articles/7_anthill/">Центр детского творчества «Муравейник»</a></h3>
+        <p>На пересечении Комсомольского проспекта и улицы Пушкина в Перми возвышается здание, которое более века служит очагом образования и творчества</p>
+        <a class="read-more" href="/perm-architecture/articles/7_anthill/">Читать →</a>
+      </div>
+    </div>
+  
+    <div class="article-card-horizontal">
+      <img class="article-thumb" src="/perm-architecture/images/uni.png" alt="Пермский государственный аграрно-технологический университет">
+      <div class="article-card-content">
+        <h3><a href="/perm-architecture/articles/6_uni/">Пермский государственный аграрно-технологический университет</a></h3>
+        <p>На пересечении улиц 25 Октября и Петропавловской в Перми возвышается здание, которое своим строгим обликом</p>
+        <a class="read-more" href="/perm-architecture/articles/6_uni/">Читать →</a>
+      </div>
+    </div>
+  
+    <div class="article-card-horizontal">
+      <img class="article-thumb" src="/perm-architecture/images/perm1.jpg" alt="Вокзал Пермь 1">
+      <div class="article-card-content">
+        <h3><a href="/perm-architecture/articles/2_perm1/">Вокзал Пермь 1</a></h3>
+        <p>Среди множества архитектурных символов Перми одно здание неизменно занимает особое место в сознании жителей и гостей города — вокзал «Пермь I»</p>
+        <a class="read-more" href="/perm-architecture/articles/2_perm1/">Читать →</a>
+      </div>
+    </div>
+  
+    <div class="article-card-horizontal">
+      <img class="article-thumb" src="/perm-architecture/images/locks.jpg" alt="Управления шлюзов Камской ГЭС">
+      <div class="article-card-content">
+        <h3><a href="/perm-architecture/articles/1_locks/">Управления шлюзов Камской ГЭС</a></h3>
+        <p>На берегах великой Камы, в северной части Перми, возвышается один из самых узнаваемых символов инженерного прогресса советской эпохи — здание управления шлюзов Камской ГЭС</p>
+        <a class="read-more" href="/perm-architecture/articles/1_locks/">Читать →</a>
+      </div>
+    </div>
+  
+    <div class="article-card-horizontal">
+      <img class="article-thumb" src="/perm-architecture/images/tower.jpg" alt="Здание главного управления МВД России по Пермскому краю">
+      <div class="article-card-content">
+        <h3><a href="/perm-architecture/articles/5_tower/">Здание главного управления МВД России по Пермскому краю</a></h3>
+        <p>На пересечении Комсомольского проспекта и улицы Героев Хасана в Перми возвышается здание, которое невозможно не заметить</p>
+        <a class="read-more" href="/perm-architecture/articles/5_tower/">Читать →</a>
+      </div>
+    </div>
+  
+    <div class="article-card-horizontal">
+      <img class="article-thumb" src="/perm-architecture/images/honeycomb.webp" alt="Бизнес-центр «Сота»">
+      <div class="article-card-content">
+        <h3><a href="/perm-architecture/articles/8_honeycomb/">Бизнес-центр «Сота»</a></h3>
+        <p>В центре Перми, на улице Малая Ямская, возвышается здание, которое невозможно не заметить</p>
+        <a class="read-more" href="/perm-architecture/articles/8_honeycomb/">Читать →</a>
+      </div>
+    </div>
+  
+</div>
   </main>
   <nav>
     <a href="/perm-architecture/">Главная</a>
