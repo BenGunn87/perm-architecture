@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" href="/perm-architecture/images/favicon.ico" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
@@ -180,6 +181,64 @@
         padding: 0 0.2rem 0.2rem 0;
       }
     }
+    .site-footer {
+      text-align: center;
+      padding: 2rem 0 1rem 0;
+      color: #789;
+      font-size: 1rem;
+      margin-top: 3rem;
+    }
+    .site-footer a { color: #4e6ca9; text-decoration: none; }
+    .site-footer a:hover { text-decoration: underline; }
+
+    .article-hero {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      min-height: 320px;
+      border-radius: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: flex-end;
+      box-shadow: 0 4px 22px rgba(44,62,80,0.08);
+      overflow: hidden;
+    }
+    .article-hero-overlay {
+      background: linear-gradient(0deg, rgba(44,62,80,0.75) 60%, rgba(44,62,80,0.09) 100%);
+      color: #fff;
+      padding: 2.2rem 2.2rem 1.4rem 2.2rem;
+      border-radius: 0 0 1.5rem 1.5rem;
+      width: 100%;
+    }
+    .article-hero-overlay h1 {
+      font-size: 2.1rem;
+      margin: 0 0 1rem 0;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.11);
+    }
+    .article-desc {
+      font-size: 1.12rem;
+      opacity: 0.92;
+      margin-bottom: 1rem;
+    }
+    .article-date {
+      font-size: 1.05rem;
+      opacity: 0.8;
+    }
+    @media (max-width: 600px) {
+      .article-hero {
+        min-height: 150px;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+      }
+      .article-hero-overlay {
+        padding: 1.1rem 0.8rem 0.7rem 0.8rem;
+      }
+      .article-hero-overlay h1 {
+        font-size: 1.3rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -188,21 +247,19 @@
   </header>
   <main>
     
-<article>
-  <h1>Управления шлюзов Камской ГЭС</h1>
+  <section class="article-hero"
+    style="background-image: url('/perm-architecture/images/locks.jpg');">
+    <div class="article-hero-overlay">
+      <h1>Управления шлюзов Камской ГЭС</h1>
+    </div>
+  </section>
 
-  
-    <img src="/perm-architecture/images/locks.jpg" alt="Управления шлюзов Камской ГЭС">
-  
-
-  
-    <p><strong>На берегах великой Камы, в северной части Перми, возвышается один из самых узнаваемых символов инженерного прогресса советской эпохи — здание управления шлюзов Камской ГЭС</strong></p>
-  
-
-  <p>На берегах великой Камы, в северной части Перми, возвышается один из самых узнаваемых символов инженерного прогресса советской эпохи — здание управления шлюзов Камской ГЭС. Этот строгий, почти торжественный силуэт с венчающим шпилем и звездой не просто часть гидротехнической системы, но и уникальный памятник архитектуры, вобравший в себя дух эпохи и мощь замысла.</p>
+  <section class="article-content">
+    <p>На берегах великой Камы, в северной части Перми, возвышается один из самых узнаваемых символов инженерного прогресса советской эпохи — здание управления шлюзов Камской ГЭС. Этот строгий, почти торжественный силуэт с венчающим шпилем и звездой не просто часть гидротехнической системы, но и уникальный памятник архитектуры, вобравший в себя дух эпохи и мощь замысла.</p>
 <h2>Исторический контекст</h2>
 <p>Появление Камской гидроэлектростанции связано с масштабной индустриализацией СССР в послевоенное время. Строительство станции началось в 1950-х годах, и помимо функциональных задач стояла цель — подчеркнуть величие инженерной мысли. Именно в этот период широко применялся стиль сталинского ампира, в котором практичность соседствовала с монументальностью и классической симметрией.</p>
 <h2>Архитектурная выразительность</h2>
+<p><img src="/perm-architecture/images/locks.jpg" alt="Управления шлюзов Камской ГЭС"></p>
 <p>Здание представляет собой восьмиэтажную башню высотой около 70 метров, которая служит управляющим пунктом для шлюзов КамГЭС. Но его назначение не мешает ему быть полноценным архитектурным произведением:</p>
 <ul>
 <li>
@@ -219,11 +276,14 @@
 <h2>Инженерное назначение</h2>
 <p>Здание не просто декоративный акцент — оно является центром управления шлюзами. Через него осуществляется контроль над водоразделом и безопасным прохождением судов. Такие сооружения крайне редки в России и тем более уникальны с точки зрения архитектурной выразительности.</p>
 
-</article>
+  </section>
 
   </main>
   <nav>
     <a href="/perm-architecture/">Главная</a>
   </nav>
 </body>
+<footer class="site-footer">
+  © 2025 — Архитектура Перми • <a href="https://github.com/BenGunn87/perm-architecture">GitHub</a>
+</footer>
 </html>
